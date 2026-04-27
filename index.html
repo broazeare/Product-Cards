@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forma — Objects & Things</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;1,6..96,300;1,6..96,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════
+       HEADER
+  ════════════════════════════ -->
+  <header class="header">
+
+    <div class="header__logo">
+      <span class="header__logo-text">Forma</span>
+      <span class="header__logo-sub" data-en="Objects & Things" data-ua="Речі та предмети">Objects & Things</span>
+    </div>
+
+    <nav class="header__nav">
+      <a class="header__nav-link" href="#new"  data-en="New"        data-ua="Новинки">New</a>
+      <a class="header__nav-link" href="#all"  data-en="All items"  data-ua="Всі товари">All items</a>
+      <a class="header__nav-link" href="#info" data-en="About"      data-ua="Про нас">About</a>
+    </nav>
+
+    <div class="header__right">
+      <!-- Переключатель языка -->
+      <div class="lang">
+        <button class="lang__btn lang__btn--active" onclick="setLang('en', this)">EN</button>
+        <span class="lang__sep">/</span>
+        <button class="lang__btn" onclick="setLang('ua', this)">UA</button>
+      </div>
+      <span class="header__cart" data-en="Cart (0)" data-ua="Кошик (0)">Cart (0)</span>
+    </div>
+
+  </header>
+
+  <!-- ════════════════════════════
+       HERO STRIP
+  ════════════════════════════ -->
+  <section class="hero">
+    <p class="hero__eyebrow" data-en="New collection · 2026" data-ua="Нова колекція · 2026">New collection · 2026</p>
+    <h1 class="hero__title">
+      <em data-en="Designed" data-ua="Спроєктовано">Designed</em>
+      <span data-en="to last." data-ua="щоб лишитись.">to last.</span>
+    </h1>
+    <p class="hero__sub" data-en="Functional objects made with intention. No trends, no noise." data-ua="Функціональні речі, зроблені з наміром. Без трендів, без шуму.">Functional objects made with intention. No trends, no noise.</p>
+  </section>
+
+  <!-- ════════════════════════════
+       FILTER BAR
+  ════════════════════════════ -->
+  <div class="filter" id="all">
+    <span class="filter__label" data-en="Filter:" data-ua="Фільтр:">Filter:</span>
+    <button class="filter__btn filter__btn--active" onclick="filterCards('all', this)" data-en="All" data-ua="Всі">All</button>
+    <button class="filter__btn" onclick="filterCards('home', this)" data-en="Home" data-ua="Дім">Home</button>
+    <button class="filter__btn" onclick="filterCards('desk', this)" data-en="Desk" data-ua="Стіл">Desk</button>
+    <button class="filter__btn" onclick="filterCards('carry', this)" data-en="Carry" data-ua="Носити">Carry</button>
+  </div>
+
+  <!-- ════════════════════════════
+       PRODUCT GRID
+  ════════════════════════════ -->
+  <main class="grid">
+
+    <!-- CARD 1 -->
+    <article class="card" data-category="home" id="new">
+      <div class="card__image-wrap">
+        <img class="card__image" src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=600&q=80" alt="Ceramic vase" />
+        <div class="card__overlay">
+          <button class="card__quick" data-en="Quick add" data-ua="Додати">Quick add</button>
+        </div>
+        <span class="card__badge card__badge--new" data-en="New" data-ua="Новинка">New</span>
+      </div>
+      <div class="card__body">
+        <div class="card__meta">
+          <span class="card__category" data-en="Home" data-ua="Дім">Home</span>
+          <span class="card__num">001</span>
+        </div>
+        <h2 class="card__title" data-en="Stoneware Vase" data-ua="Кам'яна ваза">Stoneware Vase</h2>
+        <p class="card__desc" data-en="Hand-thrown, matte glaze. Each one unique." data-ua="Ліплена вручну, матова глазур. Кожна унікальна.">Hand-thrown, matte glaze. Each one unique.</p>
+        <div class="card__footer">
+          <span class="card__price">₴ 1 240</span>
+          <button class="card__btn" data-en="Add to cart" data-ua="До кошика">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card card--featured" data-category="desk">
+      <div class="card__image-wrap">
+        <img class="card__image" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80" alt="Desk lamp" />
+        <div class="card__overlay">
+          <button class="card__quick" data-en="Quick add" data-ua="Додати">Quick add</button>
+        </div>
+        <span class="card__badge card__badge--best" data-en="Bestseller" data-ua="Хіт">Bestseller</span>
+      </div>
+      <div class="card__body">
+        <div class="card__meta">
+          <span class="card__category" data-en="Desk" data-ua="Стіл">Desk</span>
+          <span class="card__num">002</span>
+        </div>
+        <h2 class="card__title" data-en="Arc Desk Lamp" data-ua="Лампа Arc">Arc Desk Lamp</h2>
+        <p class="card__desc" data-en="Adjustable arm, warm LED, powder-coated steel." data-ua="Регульоване плече, тепле LED, сталь у порошковому покритті.">Adjustable arm, warm LED, powder-coated steel.</p>
+        <div class="card__footer">
+          <span class="card__price">₴ 3 890</span>
+          <button class="card__btn" data-en="Add to cart" data-ua="До кошика">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card" data-category="carry">
+      <div class="card__image-wrap">
+        <img class="card__image" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80" alt="Leather bag" />
+        <div class="card__overlay">
+          <button class="card__quick" data-en="Quick add" data-ua="Додати">Quick add</button>
+        </div>
+      </div>
+      <div class="card__body">
+        <div class="card__meta">
+          <span class="card__category" data-en="Carry" data-ua="Носити">Carry</span>
+          <span class="card__num">003</span>
+        </div>
+        <h2 class="card__title" data-en="Tote Bag No.3" data-ua="Сумка-тоут №3">Tote Bag No.3</h2>
+        <p class="card__desc" data-en="Full-grain leather, solid brass hardware, ages beautifully." data-ua="Шкіра повного зернення, латунна фурнітура, красиво старіє.">Full-grain leather, solid brass hardware, ages beautifully.</p>
+        <div class="card__footer">
+          <span class="card__price">₴ 5 600</span>
+          <button class="card__btn" data-en="Add to cart" data-ua="До кошика">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="card" data-category="home">
+      <div class="card__image-wrap">
+        <img class="card__image" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Minimal sofa" />
+        <div class="card__overlay">
+          <button class="card__quick" data-en="Quick add" data-ua="Додати">Quick add</button>
+        </div>
+      </div>
+      <div class="card__body">
+        <div class="card__meta">
+          <span class="card__category" data-en="Home" data-ua="Дім">Home</span>
+          <span class="card__num">004</span>
+        </div>
+        <h2 class="card__title" data-en="Linen Cushion" data-ua="Лляна подушка">Linen Cushion</h2>
+        <p class="card__desc" data-en="Washed Belgian linen, feather-down fill, 50×50 cm." data-ua="Бельгійський льон, пухово-перове наповнення, 50×50 см.">Washed Belgian linen, feather-down fill, 50×50 cm.</p>
+        <div class="card__footer">
+          <span class="card__price">₴ 890</span>
+          <button class="card__btn" data-en="Add to cart" data-ua="До кошика">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="card" data-category="desk">
+      <div class="card__image-wrap">
+        <img class="card__image" src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&q=80" alt="Notebook" />
+        <div class="card__overlay">
+          <button class="card__quick" data-en="Quick add" data-ua="Додати">Quick add</button>
+        </div>
+        <span class="card__badge card__badge--new" data-en="New" data-ua="Новинка">New</span>
+      </div>
+      <div class="card__body">
+        <div class="card__meta">
+          <span class="card__category" data-en="Desk" data-ua="Стіл">Desk</span>
+          <span class="card__num">005</span>
+        </div>
+        <h2 class="card__title" data-en="Thread Notebook" data-ua="Зошит Thread">Thread Notebook</h2>
+        <p class="card__desc" data-en="Smyth-sewn binding, 120 g/m² paper, A5 format." data-ua="Швейне скріплення, папір 120 г/м², формат A5.">Smyth-sewn binding, 120 g/m² paper, A5 format.</p>
+        <div class="card__footer">
+          <span class="card__price">₴ 420</span>
+          <button class="card__btn" data-en="Add to cart" data-ua="До кошика">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article class="card" data-category="carry">
+      <div class="card__image-wrap">
+        <img class="card__image" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80" alt="Backpack" />
+        <div class="card__overlay">
+          <button class="card__quick" data-en="Quick add" data-ua="Додати">Quick add</button>
+        </div>
+      </div>
+      <div class="card__body">
+        <div class="card__meta">
+          <span class="card__category" data-en="Carry" data-ua="Носити">Carry</span>
+          <span class="card__num">006</span>
+        </div>
+        <h2 class="card__title" data-en="Daypack 18L" data-ua="Рюкзак 18L">Daypack 18L</h2>
+        <p class="card__desc" data-en="Waxed canvas, padded laptop sleeve, hidden pockets." data-ua="Вощений брезент, підкладка для ноутбука, приховані кишені.">Waxed canvas, padded laptop sleeve, hidden pockets.</p>
+        <div class="card__footer">
+          <span class="card__price">₴ 4 200</span>
+          <button class="card__btn" data-en="Add to cart" data-ua="До кошика">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ════════════════════════════
+       INFO STRIP
+  ════════════════════════════ -->
+  <section class="info" id="info">
+    <div class="info__item">
+      <span class="info__icon">✦</span>
+      <p class="info__title" data-en="Free shipping" data-ua="Безкоштовна доставка">Free shipping</p>
+      <p class="info__sub" data-en="On orders over ₴ 2 000" data-ua="При замовленні від ₴ 2 000">On orders over ₴ 2 000</p>
+    </div>
+    <div class="info__item">
+      <span class="info__icon">✦</span>
+      <p class="info__title" data-en="30-day returns" data-ua="Повернення 30 днів">30-day returns</p>
+      <p class="info__sub" data-en="No questions asked" data-ua="Без зайвих питань">No questions asked</p>
+    </div>
+    <div class="info__item">
+      <span class="info__icon">✦</span>
+      <p class="info__title" data-en="Made to last" data-ua="Зроблено надовго">Made to last</p>
+      <p class="info__sub" data-en="Quality over quantity" data-ua="Якість понад кількість">Quality over quantity</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       FOOTER
+  ════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Forma</p>
+        <p class="footer__tagline" data-en="Objects made with intention." data-ua="Речі, зроблені з наміром.">Objects made with intention.</p>
+      </div>
+      <div class="footer__credit">
+        <p class="footer__credit-label" data-en="Designed & built by" data-ua="Дизайн і розробка:">Designed & built by</p>
+        <p class="footer__credit-name">Ivan Piven</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Forma. <span data-en="All rights reserved." data-ua="Всі права захищені.">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Переключение языка ── */
+    function setLang(lang, btn) {
+      document.querySelectorAll('.lang__btn').forEach(function(b) {
+        b.classList.remove('lang__btn--active');
+      });
+      btn.classList.add('lang__btn--active');
+
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+
+    /* ── Фильтрация карточек ── */
+    function filterCards(category, btn) {
+      /* Переключаем активную кнопку фильтра */
+      document.querySelectorAll('.filter__btn').forEach(function(b) {
+        b.classList.remove('filter__btn--active');
+      });
+      btn.classList.add('filter__btn--active');
+
+      /* Показываем/скрываем карточки через CSS-класс */
+      document.querySelectorAll('.card').forEach(function(card) {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('card--hidden');
+        } else {
+          card.classList.add('card--hidden');
+        }
+      });
+    }
+
+    /* ── Кнопка Add to cart ── */
+    document.querySelectorAll('.card__btn, .card__quick').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var original = this.textContent;
+        this.textContent = '✓';
+        this.style.background = '#1a1a1a';
+        this.style.color = '#f5f0e8';
+        var self = this;
+        setTimeout(function() {
+          self.textContent = original;
+          self.style.background = '';
+          self.style.color = '';
+        }, 1200);
+      });
+    });
+  </script>
+
+</body>
+</html>
