@@ -2,7 +2,8 @@ Coffee Landing Page
 
 Адаптивний лендинг для кофейні з акцентом на сучасний UI та зручність використання.
 
-🔗 Live Demo https://broazeare.github.io/Coffee-landing/
+🔗 Live Demo 
+https://broazeare.github.io/Product-Cards/
 
 ⚙️ Функціонал
 Адаптивна верстка (mobile / tablet / desktop)
