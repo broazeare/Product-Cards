@@ -6,16 +6,16 @@ Coffee Landing Page
 https://broazeare.github.io/Product-Cards/
 
 ⚙️ Функціонал   
-•Адаптивна верстка (mobile / tablet / desktop)  
-•Плавне прокручування  
-•Підключені Google Fonts  
-•Чиста та зрозуміла структура  
-•Кнопка перевода на українську мову  
-•Сітка карток з зображеннями, назвами та цінами  
-•Плавні hover-ефекти  
+• Адаптивна верстка (mobile / tablet / desktop)  
+• Плавне прокручування  
+• Підключені Google Fonts  
+• Чиста та зрозуміла структура  
+• Кнопка перевода на українську мову  
+• Сітка карток з зображеннями, назвами та цінами  
+• Плавні hover-ефекти  
 
 🛠 Технології  
-•HTML  
-•CSS (Flexbox)   
-•Responsive design  
-•Transitions  
+• HTML  
+• CSS (Flexbox)   
+• Responsive design  
+• Transitions  
